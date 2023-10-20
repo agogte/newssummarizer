@@ -1,23 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
+import Card from "./Components/Card";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="bg-orange-200 w-full h-screen flex justify-center items-center flex-col">
+      <p className="font-bold text-2xl text-gray-700 mb-10">News Article Summarizer</p>
+      <Card />
+      <p className="text-gray-700 font-serif mt-10">&copy; Advait Gogte</p>
     </div>
   );
 }
