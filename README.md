@@ -15,11 +15,11 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## Configuration
 
-The app calls a summarization API on RapidAPI. Create a `.env` file in the project root (already gitignored) with:
+The app calls the [Article Extractor and Summarizer](https://rapidapi.com/restyler/api/article-extractor-and-summarizer) API on RapidAPI (free tier: ~50 requests/month). Subscribe to it with your RapidAPI account, then create a `.env` file in the project root (already gitignored) with:
 
 ```
 REACT_APP_API_KEY='your-rapidapi-key'
-REACT_APP_API_HOST='easy-text-ml.p.rapidapi.com'
+REACT_APP_API_HOST='article-extractor-and-summarizer.p.rapidapi.com'
 ```
 
 ## Deploying to GitHub Pages

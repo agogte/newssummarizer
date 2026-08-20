@@ -29,14 +29,14 @@ const Card = () => {
             if (!response.ok) {
                 throw new Error(`Request failed with status ${response.status}`);
             }
-            const text = await response.text();
-            const cleaned = text.replace(/[^a-zA-Z0-9\-. ]/gm, '');
+            const data = await response.json();
+            const summary = Array.isArray(data.summary) ? data.summary.join(' ') : data.summary;
 
-            if (!cleaned.trim()) {
-                throw new Error('Empty summary returned');
+            if (!summary || !summary.trim()) {
+                throw new Error(data.error || 'Empty summary returned');
             }
 
-            setResult(cleaned);
+            setResult(summary.trim());
             setStatus('success');
         } catch (error) {
             console.error(error);
